@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Nmap exports
+*.xml
+*.gnmap
+
+# Logs
+*.log
