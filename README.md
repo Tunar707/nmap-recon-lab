@@ -1,28 +1,28 @@
 # Nmap Recon Lab
 
-Professional network reconnaissance laboratory demonstrating practical use of Nmap for host discovery, service enumeration, operating system detection, and vulnerability assessment within an isolated virtual environment.
+A practical network reconnaissance project built to learn and document Nmap techniques in a controlled virtual lab. The goal is to perform real host discovery, service enumeration, operating system fingerprinting, and basic vulnerability assessment while following a structured methodology.
 
-> **Educational Notice:** All activities in this repository were performed exclusively inside a controlled laboratory environment. No scans were conducted against public systems or networks without authorization.
+> **Scope:** All scans in this repository were performed only against intentionally vulnerable virtual machines inside an isolated host-only network. No public systems or unauthorized networks were scanned.
 
 ---
 
 ## Project Objectives
 
-This project demonstrates a structured reconnaissance methodology using Nmap.
+This lab follows the reconnaissance phase of a penetration testing workflow.
 
-- Host discovery
-- TCP port enumeration
-- Service and version detection
-- Operating system fingerprinting
-- NSE vulnerability scanning
-- Technical reporting
+- Discover live hosts on the network
+- Identify open TCP ports
+- Enumerate services and versions
+- Fingerprint the target operating system
+- Perform safe NSE vulnerability scans
+- Document findings in a professional report
 
-## Skills Demonstrated
+## Technologies & Skills
 
-- Network Reconnaissance
 - Nmap
-- TCP/IP
+- Kali Linux
+- TCP/IP Networking
 - Service Enumeration
-- OS Detection
-- Vulnerability Assessment
+- OS Fingerprinting
+- Nmap Scripting Engine (NSE)
 - Technical Documentation
