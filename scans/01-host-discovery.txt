@@ -1,0 +1,12 @@
+# Nmap 7.99 scan initiated Sat Aug 22 05:35:44 2026 as: /usr/lib/nmap/nmap --privileged -sn -oN /home/kali/nmap-recon-lab/scans/01-host-discovery.txt 192.168.56.0/24
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers: No such file or directory (2)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 192.168.56.1
+Host is up (0.00052s latency).
+MAC Address: A6:83:E7:6D:E0:64 (Unknown)
+Nmap scan report for 192.168.56.3
+Host is up (0.0011s latency).
+MAC Address: 08:00:27:79:25:07 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 192.168.56.2
+Host is up.
+# Nmap done at Sat Aug 22 05:35:46 2026 -- 256 IP addresses (3 hosts up) scanned in 2.06 seconds
