@@ -1,39 +1,96 @@
 # Nmap Recon Lab
 
-A practical network reconnaissance project built to learn and document Nmap techniques in a controlled virtual lab. The goal is to perform real host discovery, service enumeration, operating system fingerprinting, and basic vulnerability assessment while following a structured methodology.
+Professional network reconnaissance laboratory built in an isolated VirtualBox environment using Kali Linux and Metasploitable 2. The project demonstrates a complete reconnaissance workflow from host discovery to vulnerability assessment.
 
-> **Scope:** All scans in this repository were performed only against intentionally vulnerable virtual machines inside an isolated host-only network. No public systems or unauthorized networks were scanned.
+> **Ethical Notice**
+> All scans were performed exclusively against my own intentionally vulnerable laboratory machines. No public systems or unauthorized networks were scanned.
 
 ---
 
-## Project Objectives
+## Lab Overview
 
-This lab follows the reconnaissance phase of a penetration testing workflow.
+![Lab Overview](screenshots/01-lab-overview.png)
 
-- Discover live hosts on the network
-- Identify open TCP ports
-- Enumerate services and versions
-- Fingerprint the target operating system
-- Perform safe NSE vulnerability scans
-- Document findings in a professional report
+**Attacker:** Kali Linux 2026.2
 
-## Technologies & Skills
+**Target:** Metasploitable 2
 
+**Network:** Host-only (192.168.56.0/24)
+
+---
+
+## Methodology
+
+1. Host discovery
+2. TCP port enumeration
+3. Service & version detection
+4. NSE vulnerability assessment
+5. Risk analysis and reporting
+
+---
+
+## Scan Results
+
+### Host Discovery
+
+![Host Discovery](screenshots/02-host-discovery.png)
+
+Three active hosts were identified on the isolated laboratory network, including the Metasploitable target at **192.168.56.3**.
+
+### TCP Port Enumeration
+
+![TCP Scan](screenshots/03-tcp-scan.png)
+
+A SYN scan identified 23 exposed TCP services including FTP, SSH, HTTP, SMB, MySQL, PostgreSQL and Tomcat.
+
+### Service & Version Detection
+
+![Version Scan](screenshots/04-version-scan.png)
+
+Service fingerprinting identified legacy software versions suitable for security assessment and vulnerability research.
+
+### NSE Vulnerability Assessment
+
+![NSE Scan](screenshots/05-nse-vulnerabilities.png)
+
+Nmap Scripting Engine detected multiple security issues, including the well-known **vsFTPd 2.3.4 backdoor** and several legacy service exposures.
+
+---
+
+## Key Findings
+
+| Port | Service | Severity |
+|------|---------|----------|
+| 21 | vsFTPd 2.3.4 | Critical |
+| 23 | Telnet | High |
+| 139/445 | Samba | High |
+| 1524 | Root Bind Shell | Critical |
+| 3306 | MySQL | Medium |
+| 8180 | Apache Tomcat | Medium |
+
+A detailed technical report is available in `report/nmap-recon-report.md`.
+
+---
+
+## Repository Structure
+
+```text
+nmap-recon-lab/
+├── README.md
+├── scans/
+├── screenshots/
+├── report/
+└── diagrams/
+```
+
+---
+
+## Skills Demonstrated
+
+- Network Reconnaissance
 - Nmap
-- Kali Linux
-- TCP/IP Networking
-- Service Enumeration
-- OS Fingerprinting
-- Nmap Scripting Engine (NSE)
-- Technical Documentation
-
-## Lab Architecture
-
-The reconnaissance lab consists of two virtual machines connected through an isolated VirtualBox host-only network.
-
-| Component | Purpose |
-|-----------|---------|
-| macOS Host | Runs VirtualBox |
-| Kali Linux | Attacker machine used for reconnaissance |
-| Metasploitable 2 | Intentionally vulnerable target |
-| Host-Only Network | Isolated communication between VMs |
+- TCP/IP Enumeration
+- Service Fingerprinting
+- NSE Scripting
+- Vulnerability Assessment
+- Technical Reporting
