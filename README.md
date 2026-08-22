@@ -26,3 +26,14 @@ This lab follows the reconnaissance phase of a penetration testing workflow.
 - OS Fingerprinting
 - Nmap Scripting Engine (NSE)
 - Technical Documentation
+
+## Lab Architecture
+
+The reconnaissance lab consists of two virtual machines connected through an isolated VirtualBox host-only network.
+
+| Component | Purpose |
+|-----------|---------|
+| macOS Host | Runs VirtualBox |
+| Kali Linux | Attacker machine used for reconnaissance |
+| Metasploitable 2 | Intentionally vulnerable target |
+| Host-Only Network | Isolated communication between VMs |
